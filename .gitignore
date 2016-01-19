@@ -1,0 +1,5 @@
+*.sw*
+dist
+!dist/.keep
+node_modules
+scratch
