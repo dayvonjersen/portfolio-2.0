@@ -1,7 +1,12 @@
-var gulp     = require('gulp'),
-    mustache = require('mustache'),
-    myth     = require('myth'),
-    fs       = require('fs')
+// node:
+var fs         = require('fs'),
+// npm:
+    gulp       = require('gulp'),
+    mustache   = require('mustache'),
+    myth       = require('myth'),
+    commonmark = require('commonmark'),
+// lib:
+    sections   = require('./lib/sections.js');
 
 function basename(dot_mustache) {
     if(dot_mustache.indexOf('.mustache')!==-1) {
@@ -34,4 +39,19 @@ gulp.task('default', function() {
     });
     var converted = myth(css);
     fs.writeFileSync('dist/style.css', converted);
+});
+
+gulp.task('article_test', function() {
+    var txt = fs.readFileSync('articles/test.txt').toString();
+    var txt_sections = sections(txt);
+    fs.writeFileSync('cache/test-txt.json', JSON.stringify(txt_sections,undefined,'  '));
+
+    var reader = new commonmark.Parser();
+    var writer = new commonmark.HtmlRenderer();
+
+    var htm_sections = {};
+    for(section in txt_sections) {
+        htm_sections[section] = writer.render(reader.parse(txt_sections[section]));
+    }
+    fs.writeFileSync('cache/test-htm.json', JSON.stringify(htm_sections,undefined,'  '));
 });
