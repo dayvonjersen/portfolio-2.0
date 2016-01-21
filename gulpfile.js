@@ -9,13 +9,14 @@ var fs         = require('fs'),
     sections   = require('./lib/sections.js');
 
 function basename(dot_mustache) {
-    if(dot_mustache.indexOf('.mustache')!==-1) {
+    if(/.mustache$/.test(dot_mustache)) {
         return dot_mustache.substr(0,dot_mustache.indexOf('.'));
     }
     return false;
 }
 
-gulp.task('default', function() {
+// compile templates
+gulp.task('tpl', function() {
     var partials = {};
     fs.readdirSync('tpl/_include').forEach(function(filename){
         var base = basename(filename);
@@ -31,9 +32,13 @@ gulp.task('default', function() {
             fs.writeFileSync('dist/'+base+'.html', out);
         }
     });
+});
+
+// compile css
+gulp.task('css', function() {
     var css = '';
     fs.readdirSync('css').sort().forEach(function(filename){
-        if(filename.indexOf('.css')!==-1) {
+        if(/.css$/.test(filename)) {
             css += fs.readFileSync('css/'+filename).toString();
         }
     });
@@ -41,6 +46,7 @@ gulp.task('default', function() {
     fs.writeFileSync('dist/style.css', converted);
 });
 
+// TODO: compile articles
 gulp.task('article_test', function() {
     var txt = fs.readFileSync('articles/test.txt').toString();
     var txt_sections = sections(txt);
@@ -55,3 +61,12 @@ gulp.task('article_test', function() {
     }
     fs.writeFileSync('cache/test-htm.json', JSON.stringify(htm_sections,undefined,'  '));
 });
+
+// watchr
+gulp.task('watch', function() {
+    gulp.watch('tpl/*.mustache', ['tpl']);
+    gulp.watch('css/*.css', ['css']);
+});
+
+// move zig
+gulp.task('default', ['tpl', 'css']);
