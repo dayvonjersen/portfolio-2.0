@@ -1,0 +1,23 @@
+.hero {
+    width: 80%;
+    margin: 1em auto;
+    padding: 1em;
+    box-shadow: 0 0 20px #ccc;
+    border-radius: 10px;
+    line-height: 2;
+}
+.hero h2 {
+    font-size: 42px;
+}
+.hero blockquote {
+    border-left: 2px solid orange;
+    border-bottom: 1px dotted orange;
+    border-bottom-left-radius: 15px;
+    padding: 1em;
+}
+.hero-container {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

@@ -65,6 +65,7 @@ gulp.task('article_test', function() {
 // watchr
 gulp.task('watch', function() {
     gulp.watch('tpl/*.mustache', ['tpl']);
+    gulp.watch('tpl/_include/*.mustache', ['tpl']);
     gulp.watch('css/*.css', ['css']);
 });
 
