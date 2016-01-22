@@ -1,4 +1,4 @@
-.footer {
+footer {
     padding: 2.5em;
-    background: #ccc;
+    box-shadow: 0 0 10px #efefef;
 }
