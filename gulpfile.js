@@ -66,7 +66,29 @@ gulp.task('articles', function() {
             var htm_sections = {};
 
             for(section in txt_sections) {
-                htm_sections[section] = writer.render(reader.parse(txt_sections[section]));
+                if(section === 'metadata') {
+                    var metadata = {};
+                    txt_sections.metadata.split("\n").forEach(function(line) {
+                        var parts = line.split(":");
+
+                        if(parts.length !== 2) {
+                            throw new Error("Unable to parse line: \""+line+"\"");
+                        }
+
+                        var field = parts[0].trim().toLowerCase();
+                        var value = parts[1].trim();
+
+                        if(field === 'tags') {
+                            value = value.split(/\s+/);
+                        }
+
+                        metadata[field] = value;
+                    });
+                    txt_sections.metadata = metadata;
+                    htm_sections.metadata = metadata;
+                } else {
+                    htm_sections[section] = writer.render(reader.parse(txt_sections[section]));
+                }
             }
 
             fs.writeFileSync('cache/'+basename(filename)+'-txt.json', JSON.stringify(txt_sections, undefined, '  '));
