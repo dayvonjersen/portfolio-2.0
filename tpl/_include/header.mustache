@@ -5,15 +5,18 @@
         <meta name='viewport' content='width=device-width, initial-scale=1.0'>
         <title>new portfolio</title>
         <link rel='stylesheet' href='/style.css'>
+        
     </head>
     <body>
         <header>
-            <nav class="navbar-alt">
-                <a href="#" class='h1'>dayvonjersen</a>
-                <a href='#' class='text-center'>about</a>
-                <a href='#' class='text-center'>process</a>
-                <a href='#' class='text-center'>projects</a>
-                <a href='#' class='text-center'>contact</a>
+            <nav class='navbar'>
+                <h1><img src='image/awesome.png'><a href="#" class='h1'>dayvonjersen</a></h1>
+
+                <a href='#' class='navbar-hamburger' onclick='event.preventDefault();document.querySelector(".navbar").classList.toggle("navbar-expand")'>🍔</a>
+                <a href='#' class='navbar-link'>about</a>
+                <a href='#' class='navbar-link'>process</a>
+                <a href='#' class='navbar-link'>projects</a>
+                <a href='#' class='navbar-link'>contact</a>
             </nav>
         </header>
 
