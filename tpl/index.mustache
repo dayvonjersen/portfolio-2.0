@@ -1,6 +1,95 @@
 {{>header}}
 
-    <h1>dayvonjersen</h1>
-    <p>so you have this person...</p>
-    <pre>but who gives a damn</pre>
+<main style="display: flex; align-items: center; padding: 1em;">
+    <style scoped>
+        fieldset {
+            border-bottom: 1px rgba(44,44,44,0.7) dotted;
+            margin: 1em 0;
+            padding: 0.3em;
+            text-align: center;
+        }
+        legend {
+            display: block;
+            width: 100%;
+            text-align: center;
+            font-weight: bold;
+        }
+        fieldset a {
+            display: block;
+            text-decoration: none;
+            color: #00b5fb;
+        }
+        blockquote {
+            padding: 0 1em; line-height: 1.6; border-left: 4px solid grey;
+        }
+    </style>
+
+    <aside style="flex: 0 0 33%; text-align: right; padding: 1em;">
+        <h1>So you have this person called <big>Dave</big>, <small>from New Jersey</small>...</h1>
+        <fieldset>
+            <legend>open-source projects</legend>
+            <ul>
+                <li>bunzilla</li>
+                <li>vibrant</li>
+                <li>linguist</li>
+            </ul>
+            <a href="#">more on github...</a>
+        </fieldset>
+        <fieldset>
+            <legend>albums / E.P.'s</legend>
+            <ul>
+                <li>from toronto to nyc</li>
+                <li>love computer</li>
+                <li>come correct</li>
+            </ul>
+            <a href="#">more on soundcloud...</a>
+        </fieldset>
+        <fieldset>
+            <legend>blog posts</legend>
+            <ul>
+                <li>what i made in 2015</li>
+                <li>32-knob midi controller</li>
+            </ul>
+            <a href="#">more in /blog/posts...</a>
+        </aside>
+        <section style="flex: 1 1 auto">
+        <blockquote style="">
+            <p>As a teenager I made <a href=#>message boards</a> and an <a href=#>ftp client</a> while learning
+                and messing around with the latest and greatest web technologies 2004 had to offer.
+            <p>After highschool though, I took the time to get my AAS in Culinary Arts and persue a career as a
+                professional cook.
+            <p>All the while, I've had an intense love for House music, techno, tech-house and really all forms
+                of dance music. I learned to mix and bought a pair of Technics. I've played out, etc...
+        </blockquote>
+
+        <section style="display: flex; margin: 1.6em 0">
+            <div style="flex: 1 1 50%; text-align: right; padding: 1em;">
+        <h2>Languages</h2>
+
+        <ul>
+            <li>php</li>
+            <li>mysql</li>
+            <li>js</li>
+            <li>css</li>
+            <li>go</li>
+            <li>xslt</li>
+        </ul></div>
+            <div style="flex: 1 1 50%; border-left: 4px solid grey; padding: 1em;">
+
+        <h2>Libraries</h2>
+
+        <ul>
+            <li>???</li>
+    </ul></div>
+</section>
+
+        <blockquote>
+            <p>I enjoy learning new topics, learning how stuff works 
+                and using that knowledge to find practical solutions to problems.
+            <p>blabla github, previous work, etc, etc
+            <p>I am currently working on <a href=#>Sorbet</a>, a self-publishing platform for DJs
+            <p>Thank you for reading, feel free to contact me via <a href=#>email</a>
+            </blockquote>
+        </section>
+    </main>
 {{>footer}}

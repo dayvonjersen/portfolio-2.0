@@ -1,0 +1,11 @@
+.footer {
+    background: color(var(--color-fresh-blue) saturation(-100%));
+    padding: 3em 10%;
+} 
+.footer-nav {
+    list-style-type: circle;
+    color: #fff;
+}
+.footer-nav a:hover {
+    text-decoration: none;
+}

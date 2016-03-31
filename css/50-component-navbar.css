@@ -47,7 +47,7 @@
     .navbar h1 {
         flex-basis: 100%;
         text-align: center;
-        font-size: 10vmax;
+        font-size: 10vmin;
     }
     .navbar-link {
         text-align: center;
@@ -76,6 +76,9 @@
     .navbar-hamburger,
     .navbar.navbar-expand a.navbar-link  {
         display: inline-block;
+    }
+    .navbar-expand .navbar-hamburger::after {
+        content: "̽"
     }
 }
 
