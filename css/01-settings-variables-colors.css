@@ -1,0 +1,19 @@
+:root {
+    /* fresh tropics: light -> dark shades of blue, yellow */
+    --color-light-inside:           #ddfddf;
+    --color-res-cogitans:           #73d5fa;
+    --color-fresh-blue:             #3bc5fa;
+    --color-sin:                    #00b5fb;
+    --color-lickety-banana-split:   #ffef00;
+
+    /* good vibe zone: dark->light blue, orange, dark->bright yellow */
+    --color-underwater-blue:    #226888;
+    --color-light-underwater:   #398eb6;
+    --color-eyecat:             #ffa200;
+    --color-sunpower:           #ffd600;
+    --color-toxic-sunshine:     #fff500;
+
+    /* misc */
+    /* nice dark grey */
+    --color-coal-mine: #2c2c2c;
+}

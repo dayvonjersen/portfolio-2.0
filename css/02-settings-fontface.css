@@ -1,0 +1,27 @@
+@font-face {
+    font-family: "CafeAndBrewery";
+    font-style: normal;
+    font-weight: 400;
+    src: local('cafÈ & brewery'), 
+        url('webfont/cafeandbrewery.woff2') format('woff2'),
+        url('webfont/cafeandbrewery.woff') format('woff'),
+        url('webfont/cafeandbrewery.ttf') format('opentype');
+}
+@font-face {
+    font-family: "FinenessPro";
+    font-style: normal;
+    font-weight: 400;
+    src: local('Fineness Pro Regular'), 
+        url('webfont/finenesspro.woff2') format('woff2'),
+        url('webfont/finenesspro.woff') format('woff'),
+        url('webfont/finenesspro.otf') format('opentype');
+}
+@font-face {
+    font-family: "EnvyCode";
+    font-style: normal;
+    font-weight: 400;
+    src: local('Envy Code R'), 
+        url('webfont/envycode.woff2') format('woff2'),
+        url('webfont/envycode.woff') format('woff'),
+        url('webfont/envycode.ttf') format('opentype');
+}

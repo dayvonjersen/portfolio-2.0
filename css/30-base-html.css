@@ -1,7 +1,13 @@
 html, body {
     height: 100%;
     margin: 0;
-    font-family: 'Kalam', sans-serif;
+    font-family: 'FinenessPro', sans-serif;
+}
+pre {
+    font-family: 'EnvyCode', monospace;
+}
+h1 {
+    font-family: 'CafeAndBrewery', sans-serif;
 }
 body {
     display: flex;
